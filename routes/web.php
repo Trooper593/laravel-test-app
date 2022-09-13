@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,4 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::post('/contact/submit', function (\Illuminate\Http\Request $request) {
-    return $request->all();
-})->name('contact-form-url');
+Route::post('/contact/submit', [Controllers\ContactController::class, 'submit'])->name('contact-form-url');
