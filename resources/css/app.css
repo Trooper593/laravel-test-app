@@ -1,3 +1,3 @@
-.aside{
-    background: #6b7280;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
