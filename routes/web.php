@@ -15,17 +15,5 @@ use App\Http\Controllers;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 })->name('home');
-
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/contact/all', [Controllers\ContactController::class, 'allData'])->name('contact-all');
-
-Route::post('/contact/submit', [Controllers\ContactController::class, 'submit'])->name('contact-form-url');
